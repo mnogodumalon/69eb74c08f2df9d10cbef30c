@@ -6,7 +6,6 @@ import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { ErrorBusProvider } from '@/components/ErrorBus';
 import { Layout } from '@/components/Layout';
 import DashboardOverview from '@/pages/DashboardOverview';
-import { WorkflowPlaceholders } from '@/components/WorkflowPlaceholders';
 import AdminPage from '@/pages/AdminPage';
 import MitarbeiterPage from '@/pages/MitarbeiterPage';
 import TaetigkeitenPage from '@/pages/TaetigkeitenPage';
@@ -17,6 +16,7 @@ import PublicFormZeiterfassung from '@/pages/public/PublicForm_Zeiterfassung';
 // <public:imports>
 // </public:imports>
 // <custom:imports>
+const TageserfassungPage = lazy(() => import('@/pages/intents/TageserfassungPage'));
 // </custom:imports>
 
 export default function App() {
@@ -32,12 +32,13 @@ export default function App() {
               {/* <public:routes> */}
               {/* </public:routes> */}
               <Route element={<Layout />}>
-                <Route index element={<><div className="mb-8"><WorkflowPlaceholders /></div><DashboardOverview /></>} />
+                <Route index element={<DashboardOverview />} />
                 <Route path="mitarbeiter" element={<MitarbeiterPage />} />
                 <Route path="taetigkeiten" element={<TaetigkeitenPage />} />
                 <Route path="zeiterfassung" element={<ZeiterfassungPage />} />
                 <Route path="admin" element={<AdminPage />} />
                 {/* <custom:routes> */}
+                <Route path="intents/tageserfassung" element={<Suspense fallback={null}><TageserfassungPage /></Suspense>} />
                 {/* </custom:routes> */}
               </Route>
             </Routes>

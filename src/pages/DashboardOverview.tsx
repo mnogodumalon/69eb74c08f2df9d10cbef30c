@@ -7,7 +7,7 @@ import { LivingAppsService, createRecordUrl, extractRecordId } from '@/services/
 import { formatDate } from '@/lib/formatters';
 import { useState, useMemo, useCallback } from 'react';
 import { Skeleton } from '@/components/ui/skeleton';
-import { IconAlertCircle, IconTool, IconRefresh, IconCheck, IconPlus, IconPencil, IconTrash, IconClock, IconUsers, IconChevronLeft, IconChevronRight, IconCalendar, IconBriefcase } from '@tabler/icons-react';
+import { IconAlertCircle, IconTool, IconRefresh, IconCheck, IconPlus, IconPencil, IconTrash, IconClock, IconUsers, IconChevronLeft, IconChevronRight, IconCalendar, IconBriefcase, IconClipboardList } from '@tabler/icons-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { StatCard } from '@/components/StatCard';
@@ -138,6 +138,20 @@ export default function DashboardOverview() {
 
   return (
     <div className="space-y-6">
+      {/* Intent Navigation */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <a href="#/intents/tageserfassung" className="bg-card border border-border rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow flex items-center gap-4 border-l-4 border-l-primary no-underline group">
+          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+            <IconClipboardList size={20} className="text-primary" />
+          </div>
+          <div className="min-w-0 flex-1">
+            <div className="font-semibold text-foreground text-sm">Tageserfassung</div>
+            <div className="text-xs text-muted-foreground truncate">Mehrere Zeiteinträge für einen Mitarbeiter auf einmal erfassen</div>
+          </div>
+          <IconChevronRight size={16} className="text-muted-foreground shrink-0 group-hover:text-primary transition-colors" />
+        </a>
+      </div>
+
       {/* KPI Row */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         <StatCard
