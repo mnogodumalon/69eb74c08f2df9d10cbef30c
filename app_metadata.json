@@ -1,0 +1,287 @@
+{
+  "appgroup_id": "69eb74c08f2df9d10cbef30c",
+  "appgroup_name": "Zeiterfassung BGA",
+  "apps": {
+    "mitarbeiter": {
+      "app_id": "69eb749bd1b6e71887fae80e",
+      "name": "Mitarbeiter",
+      "controls": {
+        "vorname": {
+          "identifier": "vorname",
+          "label": "Vorname",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        },
+        "nachname": {
+          "identifier": "nachname",
+          "label": "Nachname",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        },
+        "email": {
+          "identifier": "email",
+          "label": "E-Mail",
+          "type": "string",
+          "subtype": "email",
+          "fulltype": "string/email",
+          "description": "A valid email address (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        },
+        "telefon": {
+          "identifier": "telefon",
+          "label": "Telefon",
+          "type": "string",
+          "subtype": "tel",
+          "fulltype": "string/tel",
+          "description": "A valid telephone number (or `null`/`None`). Might include country prefix and should include area code.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        },
+        "abteilung": {
+          "identifier": "abteilung",
+          "label": "Abteilung",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        }
+      }
+    },
+    "taetigkeiten": {
+      "app_id": "69eb74a2c7c186f25a3f3290",
+      "name": "Tätigkeiten",
+      "controls": {
+        "taetigkeit_name": {
+          "identifier": "taetigkeit_name",
+          "label": "Bezeichnung der Tätigkeit",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        },
+        "taetigkeit_beschreibung": {
+          "identifier": "taetigkeit_beschreibung",
+          "label": "Beschreibung",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea",
+          "description": "A string value that can contain multiple lines of text (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        },
+        "taetigkeit_kategorie": {
+          "identifier": "taetigkeit_kategorie",
+          "label": "Kategorie",
+          "type": "lookup",
+          "subtype": "select",
+          "fulltype": "lookup/select",
+          "description": "One selected option of multiple available options (or `null`/`None`).\n\nThe available options are defined in the `lookup_data` attribute of this control.\n\nThe field value will be the key in this `lookup_data` attribute (or `null`/`None`).\n\nDisplayed as single-select field in HTML pages.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true,
+          "lookup_data": {
+            "beratung": "Beratung",
+            "buchhaltung": "Buchhaltung",
+            "steuern": "Steuern",
+            "verwaltung": "Verwaltung",
+            "sonstiges": "Sonstiges"
+          }
+        }
+      }
+    },
+    "zeiterfassung": {
+      "app_id": "69eb74a400a81b8be060f8aa",
+      "name": "Zeiterfassung",
+      "controls": {
+        "datum": {
+          "identifier": "datum",
+          "label": "Datum",
+          "type": "date",
+          "subtype": "date",
+          "fulltype": "date/date",
+          "description": "A calendar date consisting of year, month and day (or `null`/`None`)\n\nThe field value will be a string in the format `<YYYY>-<MM>-<DD>` (or `null`/`None`).\n\nFor example: `2000-02-29`.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        },
+        "startzeit": {
+          "identifier": "startzeit",
+          "label": "Startzeit",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        },
+        "endzeit": {
+          "identifier": "endzeit",
+          "label": "Endzeit",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        },
+        "dauer_stunden": {
+          "identifier": "dauer_stunden",
+          "label": "Dauer (Stunden)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "description": "A decimal number value (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true,
+          "precision": null
+        },
+        "mandant": {
+          "identifier": "mandant",
+          "label": "Mandant",
+          "type": "lookup",
+          "subtype": "select",
+          "fulltype": "lookup/select",
+          "description": "One selected option of multiple available options (or `null`/`None`).\n\nThe available options are defined in the `lookup_data` attribute of this control.\n\nThe field value will be the key in this `lookup_data` attribute (or `null`/`None`).\n\nDisplayed as single-select field in HTML pages.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true,
+          "lookup_data": {
+            "bag": "BAG",
+            "reichruthhard": "ReichRuthhard",
+            "juergen_reich": "Jürgen Reich",
+            "matthias_ruthhard": "Matthias Ruthhard"
+          }
+        },
+        "mitarbeiter_ref": {
+          "identifier": "mitarbeiter_ref",
+          "label": "Mitarbeiter",
+          "type": "applookup",
+          "subtype": "select",
+          "fulltype": "applookup/select",
+          "description": "A reference to a LivingApp record from the target lookup app 'Mitarbeiter' with the id `69eb749bd1b6e71887fae80e` (or `null`/`None`).\n\nThe field value will be a valid record URL in the form `https://my.living-apps.de/rest/apps/69eb749bd1b6e71887fae80e/<record-id>` (or `null`/`None`).\n\nDisplayed as single-select field in HTML pages.",
+          "required": null,
+          "in_list": false,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": null,
+          "in_expert_search": true,
+          "lookup_app": "https://my.living-apps.de/rest/apps/69eb749bd1b6e71887fae80e"
+        },
+        "taetigkeit_ref": {
+          "identifier": "taetigkeit_ref",
+          "label": "Tätigkeit",
+          "type": "applookup",
+          "subtype": "select",
+          "fulltype": "applookup/select",
+          "description": "A reference to a LivingApp record from the target lookup app 'Tätigkeiten' with the id `69eb74a2c7c186f25a3f3290` (or `null`/`None`).\n\nThe field value will be a valid record URL in the form `https://my.living-apps.de/rest/apps/69eb74a2c7c186f25a3f3290/<record-id>` (or `null`/`None`).\n\nDisplayed as single-select field in HTML pages.",
+          "required": null,
+          "in_list": false,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": null,
+          "in_expert_search": true,
+          "lookup_app": "https://my.living-apps.de/rest/apps/69eb74a2c7c186f25a3f3290"
+        },
+        "notiz": {
+          "identifier": "notiz",
+          "label": "Notiz / Beschreibung",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea",
+          "description": "A string value that can contain multiple lines of text (or `null`/`None`).",
+          "required": null,
+          "in_list": false,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": null,
+          "in_expert_search": true
+        }
+      }
+    }
+  },
+  "metadata": {
+    "apps_list": [
+      "Mitarbeiter",
+      "Tätigkeiten",
+      "Zeiterfassung"
+    ]
+  }
+}

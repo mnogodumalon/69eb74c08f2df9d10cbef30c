@@ -1,0 +1,5 @@
+- Mitarbeiter (mitarbeiter): vorname[string/text], nachname[string/text], email[string/email], telefon[string/tel], abteilung[string/text]
+- Tätigkeiten (taetigkeiten): taetigkeit_name[string/text], taetigkeit_beschreibung[string/textarea], taetigkeit_kategorie[lookup/select]
+- Zeiterfassung (zeiterfassung): datum[date/date], startzeit[string/text], endzeit[string/text], dauer_stunden[number], mandant[lookup/select], mitarbeiter_ref[applookup/select], taetigkeit_ref[applookup/select], notiz[string/textarea]
+  → mitarbeiter_ref links to app_id 69eb749bd1b6e71887fae80e
+  → taetigkeit_ref links to app_id 69eb74a2c7c186f25a3f3290

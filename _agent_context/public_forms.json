@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "forms": [
+    {
+      "entity": "mitarbeiter",
+      "app_id": "69eb749bd1b6e71887fae80e",
+      "path": "/rest/apps/69eb749bd1b6e71887fae80e/records",
+      "allowed_fields": [
+        "vorname",
+        "nachname",
+        "email",
+        "telefon",
+        "abteilung"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Mitarbeiter — Formular"
+    },
+    {
+      "entity": "taetigkeiten",
+      "app_id": "69eb74a2c7c186f25a3f3290",
+      "path": "/rest/apps/69eb74a2c7c186f25a3f3290/records",
+      "allowed_fields": [
+        "taetigkeit_name",
+        "taetigkeit_beschreibung",
+        "taetigkeit_kategorie"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Tätigkeiten — Formular"
+    },
+    {
+      "entity": "zeiterfassung",
+      "app_id": "69eb74a400a81b8be060f8aa",
+      "path": "/rest/apps/69eb74a400a81b8be060f8aa/records",
+      "allowed_fields": [
+        "datum",
+        "startzeit",
+        "endzeit",
+        "dauer_stunden",
+        "mandant",
+        "notiz"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Zeiterfassung — Formular"
+    }
+  ]
+}
